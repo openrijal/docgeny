@@ -16,7 +16,7 @@ export default eventHandler(async (event) => {
     },
   ]
 
-  const response = $fetch(url, {
+  const inference = await $fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -24,5 +24,8 @@ export default eventHandler(async (event) => {
     },
     body: { messages },
   })
-  return response
+
+  const response = inference.result.response
+
+  return { response }
 })
