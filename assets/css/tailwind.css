@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 text-white font-bold uppercase text-xl px-6 py-2  lg:px-10 lg:py-4 rounded-md border-4 border-blue-100 hover:bg-blue-700 hover:border-blue-200;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-blue-600 font-bold uppercase text-xl px-6 py-2  lg:px-10 lg:py-4  rounded-md  border-4 border-blue-600 hover:border-blue-700;
+  }
+
+  .heading {
+    @apply text-3xl font-semibold text-black;
+  }
+
+  .subheading {
+    @apply text-xl font-semibold text-black;
+  }
+
+  .input-primary {
+    @apply text-black border border-r-gray-200 rounded-md px-1 py-2 md:px-2 md:py-4 lg:px-3 outline-none text-lg;
+  }
+}

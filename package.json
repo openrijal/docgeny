@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "migrations": "drizzle-kit generate:sqlite",
+    "migrateD1": "pnpx tsx ./server/db/migrate.ts d1",
+    "migrateLocal": "pnpx tsx ./server/db/migrate.ts local",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "better-sqlite3": "^9.0.0",
+    "drizzle-kit": "^0.19.13",
+    "nuxt": "^3.8.0",
+    "nuxt-server-fn": "^0.3.3",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^40.0.0",
+    "@ckeditor/ckeditor5-vue": "^5.1.0",
+    "@iconify-json/mdi": "^1.1.54",
+    "@nuxt/ui": "^2.9.0",
+    "drizzle-orm": "^0.28.6",
+    "vue-select": "^3.20.2"
+  }
+}
