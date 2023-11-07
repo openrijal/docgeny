@@ -15,6 +15,7 @@
         ><input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           id="name"
+          v-model="fields.name"
           placeholder="Enter your name"
           required
         />
@@ -27,6 +28,7 @@
         ><input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           id="position"
+          v-model="fields.position"
           placeholder="Enter the position you're applying for"
           required
         />
@@ -39,6 +41,7 @@
         ><input
           class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           id="company"
+          v-model="fields.company"
           placeholder="Enter the company name"
           required
         />
@@ -52,3 +55,11 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const fields = ref({
+  name: '',
+  position: '',
+  company: '',
+})
+</script>
