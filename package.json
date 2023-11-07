@@ -11,8 +11,8 @@
     "migrateD1": "pnpx tsx ./server/db/migrate.ts d1",
     "migrateLocal": "pnpx tsx ./server/db/migrate.ts local",
     "postinstall": "nuxt prepare",
-    "release": "NITRO_PRESET=cloudflare_module nuxt build && wrangler deploy",
-    "releaseOnly": "wrangler deploy"
+    "release": "NITRO_PRESET=cloudflare_pages nuxt build && wrangler pages deploy dist/",
+    "releaseOnly": "wrangler pages deploy dist/"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
