@@ -6,9 +6,14 @@ export default eventHandler(async (event) => {
   const messages = [
     {
       role: 'system',
-      content: 'You reply in only one sentence.',
+      content:
+        'You generate cover letter for the user prompt. Do not use placeholders for unknown values.',
     },
-    { role: 'user', content: 'What is the origin of the phrase Hello, World' },
+    {
+      role: 'user',
+      content:
+        'Name: Dipesh Acharya, Position: Nuxt Developer, Company: Nuxt Labs',
+    },
   ]
 
   const response = $fetch(url, {
