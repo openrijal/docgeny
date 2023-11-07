@@ -4,7 +4,10 @@ account_id = "7a9f8df3353033ce3233c4d41ab4a6ff"
 workers_dev = true
 compatibility_date = "2022-11-07"
 node_compat = true
- 
+
+[site]
+bucket = ".output/public"
+
 [[ d1_databases ]]
 binding = "DB"
 database_name = "docgeny"
