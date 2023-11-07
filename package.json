@@ -11,13 +11,14 @@
     "migrateD1": "pnpx tsx ./server/db/migrate.ts d1",
     "migrateLocal": "pnpx tsx ./server/db/migrate.ts local",
     "postinstall": "nuxt prepare",
-    "release": "nuxt build && wrangler deploy"
+    "release": "NITRO_PRESET=cloudflare_module nuxt build && wrangler deploy",
+    "releaseOnly": "wrangler deploy"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "better-sqlite3": "^9.0.0",
     "drizzle-kit": "^0.19.13",
-    "nuxt": "^3.8.0",
+    "nuxt": "^3.8.1",
     "nuxt-server-fn": "^0.3.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5",
