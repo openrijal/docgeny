@@ -58,7 +58,7 @@
       </form>
     </div>
 
-    <div class="mx-auto max-w-4xl space-y-6 mt-16">
+    <div v-if="isGenerated" class="mx-auto max-w-4xl space-y-6 mt-16">
       <div
         class="rounded-lg border bg-card text-card-foreground shadow-sm"
         data-v0-t="card"
@@ -116,6 +116,7 @@
             </button>
           </div>
         </div>
+        <div class="m-8" v-html="generatedResponse"></div>
       </div>
     </div>
   </div>
@@ -128,10 +129,16 @@ const fields = ref({
   company: '',
 })
 
+const isGenerated = ref(false)
+
+const generatedResponse = ref('')
+
 const submit = async () => {
-  const response = await useFetch('/api/infer', {
+  const apiResponse = await useFetch('/api/infer', {
     method: 'POST',
     body: fields.value,
   })
+  generatedResponse.value = apiResponse.data.value.response
+  isGenerated.value = true
 }
 </script>
