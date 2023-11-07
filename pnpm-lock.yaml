@@ -11,6 +11,9 @@ dependencies:
   '@ckeditor/ckeditor5-vue':
     specifier: ^5.1.0
     version: 5.1.0
+  '@cloudflare/ai':
+    specifier: ^1.0.23
+    version: 1.0.23
   '@iconify-json/mdi':
     specifier: ^1.1.54
     version: 1.1.55
@@ -642,6 +645,10 @@ packages:
       '@ckeditor/ckeditor5-ui': 40.0.0
       '@ckeditor/ckeditor5-utils': 40.0.0
       lodash-es: 4.17.21
+    dev: false
+
+  /@cloudflare/ai@1.0.23:
+    resolution: {integrity: sha512-H616o6h/pnFivwAQS2Kw3TAR4ijDDGiRrZbngrPQRu5tHGS3hIJiNPYU7habUEnnZCnxTbjY3bjer35axED6Aw==}
     dev: false
 
   /@cloudflare/kv-asset-handler@0.2.0:
@@ -2032,6 +2039,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -5687,6 +5695,10 @@ packages:
 
   /napi-build-utils@1.0.2:
     resolution: {integrity: sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==}
+
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    dev: true
 
   /negotiator@0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
