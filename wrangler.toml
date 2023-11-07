@@ -12,3 +12,6 @@ bucket = ".output/public"
 binding = "DB"
 database_name = "docgeny"
 database_id = "e474acb3-f48a-4ced-a796-7f0777721f4c"
+
+[ai]
+binding = "AI" # i.e. available in your Worker on env.AI
