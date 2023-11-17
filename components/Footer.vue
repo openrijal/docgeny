@@ -99,7 +99,7 @@
       </div>
       <div class="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row">
         <p class="text-sm text-gray-600">
-          © Copyright 2023 DocGeny
+          © Copyright {{ new Date().getFullYear() }} DocGeny
         </p>
         <div class="flex items-center mt-4 space-x-4 sm:mt-0">
           <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
