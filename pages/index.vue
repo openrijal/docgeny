@@ -3,13 +3,13 @@
     <!-- start: features section -->
     <UInput
       name="search"
-      placeholder="what service would you like"
+      placeholder="What service would you like?"
       color="primary"
       variant="outline"
       v-model="search_term"
     />
 
-    <div class="grid grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-8">
       <div>
         <UCard>
           <template #header>
@@ -26,7 +26,7 @@
               variant="solid"
               label="Try Now"
               :trailing="false"
-              to="/coverLetter"
+              to="/cover-letter"
             />
           </template>
         </UCard>
@@ -47,7 +47,7 @@
               size="sm"
               color="primary"
               variant="solid"
-              label="Button"
+              label="Try now"
               :trailing="false"
             />
           </template>
