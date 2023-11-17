@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div class="container mx-auto p-4">
     <!-- start: features section -->
     <UInput
