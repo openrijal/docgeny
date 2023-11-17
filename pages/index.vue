@@ -10,7 +10,7 @@
       v-model="search_term"
     />
 
-    <div class="grid grid-cols-4 gap-4 mt-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-8">
       <div>
         <UCard>
           <template #header>
@@ -48,7 +48,7 @@
               size="sm"
               color="primary"
               variant="solid"
-              label="Button"
+              label="Try now"
               :trailing="false"
             />
           </template>
