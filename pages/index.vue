@@ -102,6 +102,7 @@
 
     <!-- end: features section -->
   </div>
+  <Footer />
 </template>
 
 <script setup>
