@@ -28,6 +28,9 @@ dependencies:
     version: 3.20.2(vue@3.3.8)
 
 devDependencies:
+  '@mediapipe/tasks-text':
+    specifier: ^0.10.9
+    version: 0.10.9
   '@nuxt/devtools':
     specifier: latest
     version: 1.0.0(nuxt@3.8.1)(vite@4.5.0)
@@ -1501,6 +1504,10 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: true
+
+  /@mediapipe/tasks-text@0.10.9:
+    resolution: {integrity: sha512-4oR9p0eC86RkZ6s1H7R/VwlZx5eH4E4JcWAXBnt828HZdVZZNfqe/TbqonlhMWnAig9QF1ELzJt77wxtLGvvKA==}
     dev: true
 
   /@netlify/functions@2.3.0:

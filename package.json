@@ -15,6 +15,7 @@
     "releaseOnly": "wrangler pages deploy dist/"
   },
   "devDependencies": {
+    "@mediapipe/tasks-text": "^0.10.9",
     "@nuxt/devtools": "latest",
     "better-sqlite3": "^9.0.0",
     "drizzle-kit": "^0.19.13",
