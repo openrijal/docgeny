@@ -1,15 +1,15 @@
 <template>
   <h1>{{ status }}</h1>
-  <p>Tap/click then say a color to change the background color of the app.</p>
+  <p>{{ inputText }}</p>
   <div>
     <p class="output">
-      <em>{{ output }}</em>
+      <em>{{ result }}</em>
     </p>
   </div>
   <button @click="doStart">Start</button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {
   TextClassifier,
   FilesetResolver,
@@ -37,14 +37,21 @@ async function createClassifier() {
   const textFiles = await FilesetResolver.forTextTasks(
     'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-text@0.10.0/wasm'
   )
-  const textClassifier = await TextClassifier.createFromOptions(textFiles, {
+  return await TextClassifier.createFromOptions(textFiles, {
     baseOptions: {
       modelAssetPath: `https://storage.googleapis.com/mediapipe-tasks/text_classifier/bert_text_classifier.tflite`,
     },
     maxResults: 5,
   })
 }
-createClassifier()
+const textClassifier = await createClassifier()
+
+const inputText = 'Please set a reminder for calling mom at 2 pm.'
+
+// Wait to run the function until inner text is set
+const result = await textClassifier.classify(inputText)
+
+console.log(result)
 
 const doStart = () => {
   // recognization.start()
