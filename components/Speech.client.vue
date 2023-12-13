@@ -10,7 +10,10 @@
 </template>
 
 <script setup>
-import { FilesetResolver, TextClassifier } from '@mediapipe/tasks-text'
+import {
+  TextClassifier,
+  FilesetResolver,
+} from 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-text@0.10.0'
 
 if ('speechSynthesis' in window) {
   // Speech Synthesis supported 🎉
@@ -32,9 +35,9 @@ recognization.onresult = (e) => {
 
 async function createClassifier() {
   const textFiles = await FilesetResolver.forTextTasks(
-    'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-text@latest/wasm/'
+    'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-text@0.10.0/wasm'
   )
-  textClassifier = await TextClassifier.createFromOptions(textFiles, {
+  const textClassifier = await TextClassifier.createFromOptions(textFiles, {
     baseOptions: {
       modelAssetPath: `https://storage.googleapis.com/mediapipe-tasks/text_classifier/bert_text_classifier.tflite`,
     },
